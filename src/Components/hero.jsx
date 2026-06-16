@@ -44,7 +44,7 @@ const Hero = () => {
                             bg-gradient-to-r from-[#F7E27C] via-[#D4AF37] to-[#B8860B]
                             poppins font-extrabold
                             hover:scale-105 transition-all duration-300 shadow-lg shadow-[#D4AF37]/30">
-                            <a href="/public/CurrenSee.apk">
+                            <a href="https://github.com/user-attachments/files/29010379/CurrenSee.zip">
                                 Download App
                             </a>
                         </button>
