@@ -26,7 +26,7 @@ const Navbar = () => {
                 transition-all duration-300 shadow-lg shadow-[#D4AF37]/30 poppins"
 
             >
-               <a href="/public/CurrenSee.apk">
+               <a href="https://github.com/user-attachments/files/29010379/CurrenSee.zip">
                    Download App
                </a>
             </button>
