@@ -1,0 +1,246 @@
+/* =========================
+   CURRENSEE DESIGN SYSTEM
+   ========================= */
+
+@import "tailwindcss";
+
+:root {
+
+  /*Fonts Family*/
+  --font-heading: 'Manrope', sans-serif;
+  --font-body: 'Manrope', sans-serif;
+
+  /* Backgrounds */
+  --bg-primary: #0A0E1A;
+  --bg-secondary: #111827;
+  --bg-tertiary: #151D31;
+
+  /* Surfaces */
+  --surface: #141B2D;
+  --surface-hover: #1B2438;
+  --surface-light: #202B44;
+
+  /* Gold Accent */
+  --gold: #D4AF37;
+  --gold-soft: #E8C76A;
+  --gold-dark: #B8962E;
+
+  /* Text */
+  --text-primary: #FFFFFF;
+  --text-secondary: #CBD5E1;
+  --text-muted: #94A3B8;
+  --text-disabled: #64748B;
+
+  /* Borders */
+  --border-primary: #263044;
+  --border-secondary: #334155;
+
+  /* Status */
+  --success: #10B981;
+  --warning: #F59E0B;
+  --danger: #EF4444;
+
+  /* Shadows */
+  --shadow-card:
+          0 8px 24px rgba(0,0,0,0.35);
+
+  --shadow-gold:
+          0 0 24px rgba(212,175,55,0.18);
+
+  /* Radius */
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+
+  /* Typography */
+  --font-primary: Arial, sans-serif;
+}
+
+/* =========================
+   BODY
+   ========================= */
+
+body {
+  font-family: var(--font-primary);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* =========================
+   EXACT APP BACKGROUND
+   ========================= */
+
+.main-bg {
+  background:
+          radial-gradient(
+                  circle at top right,
+                  rgba(212,175,55,0.08),
+                  transparent 35%
+          ),
+          radial-gradient(
+                  circle at bottom left,
+                  rgba(212,175,55,0.04),
+                  transparent 30%
+          ),
+          var(--bg-primary);
+}
+
+/* =========================
+   CARDS
+   ========================= */
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+}
+
+.card:hover {
+  border-color: var(--gold);
+  transition: 0.3s ease;
+}
+
+/* =========================
+   BUTTONS
+   ========================= */
+
+.btn-primary {
+  background: var(--gold);
+  color: #0A0E1A;
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 16px 24px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: var(--gold-soft);
+  box-shadow: var(--shadow-gold);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border-secondary);
+  border-radius: var(--radius-sm);
+  padding: 16px 24px;
+}
+
+.btn-secondary:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+/* =========================
+   INPUTS
+   ========================= */
+
+.input {
+  background: var(--surface);
+  border: 1px solid var(--border-primary);
+  border-radius: 10px;
+  color: var(--text-primary);
+  padding: 16px;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(212,175,55,0.15);
+}
+
+/* =========================
+   HEADINGS
+   ========================= */
+
+h1 {
+  font-size: 72px;
+  font-weight: 900;
+  letter-spacing: -2px;
+  line-height: 1;
+}
+
+h2 {
+  font-size: 48px;
+  font-weight: 900;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+/* =========================
+   GOLD TEXT
+   ========================= */
+
+.text-gold {
+  background: linear-gradient(90deg, #f7e27c, #d4af37, #b8860b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+/* =========================
+   NAVBAR
+   ========================= */
+
+.navbar {
+  background: rgba(10,14,26,0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* =========================
+   PHONE MOCKUP GLOW
+   ========================= */
+
+.phone-glow {
+  box-shadow:
+          0 0 60px rgba(212,175,55,0.12),
+          0 0 120px rgba(212,175,55,0.08);
+}
+
+.poppins{
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+}
+
+
+.underline-hover {
+  position: relative;
+  text-decoration: none;
+  color: #ffffff; /* Customize to fit your theme */
+  font-size: 1.2rem;
+  padding-bottom: 4px;
+}
+
+/* Create the pseudo-element underline */
+.underline-hover::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px; /* Thickness of the underline */
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(90deg, #f7e27c, #d4af37, #b8860b); /* Customize underline color (e.g., Gold) */
+
+  /* Core transition logic */
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+/* Hover effects */
+.underline-hover:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
